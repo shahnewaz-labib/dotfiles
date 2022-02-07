@@ -7,7 +7,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -112,7 +111,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-export PATH="~/bin/:$PATH"
+export PATH=$HOME/bin/:$PATH
 
 alias fn="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
 alias update="sudo pacman -Syu"
@@ -120,3 +119,4 @@ alias rdshift="redshift -l 24.1:90.41 & disown"
 alias nvimcfg="nvim ~/.config/nvim/init.vim"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
