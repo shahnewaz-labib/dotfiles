@@ -24,6 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# hello
+
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
