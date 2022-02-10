@@ -13,7 +13,7 @@ set showmatch           " highlight matching parentheses / brackets [{()}]
 set ruler               " show line and column number of the cursor on right side of statusline
 syntax enable
 
-call plug#begin('~/.config/nvim-plugged')
+call plug#begin('~/.config/plugged-nvim')
 
     " Live server
     Plug 'turbio/bracey.vim'
