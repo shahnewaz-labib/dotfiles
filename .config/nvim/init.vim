@@ -14,6 +14,10 @@ set ruler               " show line and column number of the cursor on right sid
 syntax enable
 
 call plug#begin('~/.config/nvim-plugged')
+
+    " Live server
+    Plug 'turbio/bracey.vim'
+
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     " fuzzy search

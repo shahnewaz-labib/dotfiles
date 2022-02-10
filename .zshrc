@@ -120,3 +120,5 @@ alias nvimcfg="nvim ~/.config/nvim/init.vim"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+eval "$(lua ~/bin/z.lua --init zsh)"
+
