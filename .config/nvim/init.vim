@@ -122,6 +122,9 @@ map <Leader>y :%y+ <CR>
 " Delete whole file
 map <Leader>d :%d <CR>
 
+" More comfortable esc
+map <C-[> <ESC>
+
 " Switching Tabs
 " nnoremap <C-Left> :tabprevious<CR>                                                                            
 " nnoremap <C-Right> :tabnext<CR>

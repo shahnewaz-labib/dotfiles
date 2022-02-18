@@ -6,4 +6,6 @@ alias update='sudo pacman -Syu'
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias nvimcfg='nvim ~/.config/nvim/init.vim'
+alias g='git'
+alias l='ls -l'
 
