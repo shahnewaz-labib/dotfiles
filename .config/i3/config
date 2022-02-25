@@ -279,7 +279,7 @@ bar {
          status_command ~/.config/bumblebee-status/bumblebee-status \
          -t solarized-powerline \
          -m shell cpu memory date time brightness redshift pasink pasource battery \
-         -p shell.command="echo $(python ~/codes/py/weather.py bogra)C in Bogra" \
+         -p shell.command="echo $(python ~/codes/py/weather.py gazipur)C in Gazipur" \
          date.format="%d-%m-%Y" \
          time.format="%I:%M %p" \
          memory.format="{used}" \
