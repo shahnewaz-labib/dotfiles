@@ -367,7 +367,7 @@ schemes:
 # *SolarizedDark
 # *TomorrowNight
 
-colors: *SolarizedDark
+colors: *MonokaiPro
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
@@ -417,7 +417,7 @@ window:
 
 font:
   normal:
-    family: "Source Code Pro"
+    family: "Ubuntu Mono"
     style: Regular
   size: 12
 
