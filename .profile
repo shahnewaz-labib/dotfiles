@@ -4,3 +4,5 @@ if [ -n ${TOUCHPAD} ]; then
     xinput set-prop ${TOUCHPAD} "libinput Tapping Enabled" 1
     xinput set-prop ${TOUCHPAD} "libinput Natural Scrolling Enabled" 1 
 fi
+
+export PATH="$PATH:$HOME/bin/"

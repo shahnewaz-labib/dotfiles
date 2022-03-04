@@ -1,1 +1,3 @@
-echo "hoise"
+#!/bin/sh
+
+echo "1" >> ~/testfile
