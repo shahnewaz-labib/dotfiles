@@ -10,7 +10,7 @@ set nu rnu
 set noshowmode
 set lazyredraw          " redraw screen only when we need to
 set showmatch           " highlight matching parentheses / brackets [{()}]
-set ruler               " show line and column number of the cursor on right side of statusline
+" set ruler               " show line and column number of the cursor on right side of statusline
 syntax enable
 
 call plug#begin('~/.config/plugged-nvim')
@@ -113,6 +113,7 @@ autocmd filetype cpp map <F4> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X
 autocmd filetype cpp map <F6> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program && (timeout 5 /home/labib/codes/X/program < /home/labib/codes/X/in) >  /home/labib/codes/X/out<CR>
 autocmd filetype python map <F5> :!python3 % <CR>
 autocmd filetype sh map <F5> :!chmod +x % && ./% <CR>
+autocmd filetype js map<F6> :!node % <CR>
 
 " Leader key
 let mapleader=',,'
