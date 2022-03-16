@@ -16,13 +16,13 @@ syntax enable
 call plug#begin('~/.config/plugged-nvim')
 
     " Live server
-    Plug 'turbio/bracey.vim'
+    " Plug 'turbio/bracey.vim'
 
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     " fuzzy search
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    " Plug 'nvim-lua/plenary.nvim'
+    " Plug 'nvim-telescope/telescope.nvim'
 
     " Commenting
     Plug 'tpope/vim-commentary'
@@ -31,7 +31,7 @@ call plug#begin('~/.config/plugged-nvim')
     Plug 'psliwka/vim-smoothie'
 
     " Formatter
-    Plug 'rhysd/vim-clang-format'
+   Plug 'rhysd/vim-clang-format'
 
     " Themes
     " Plug 'gosukiwi/vim-atom-dark'
@@ -52,7 +52,7 @@ call plug#begin('~/.config/plugged-nvim')
 
 
     " Instant markdown
-    Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+    " Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
     " Airline
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes
@@ -62,7 +62,7 @@ call plug#begin('~/.config/plugged-nvim')
 
     " Auto bracket pair
     Plug 'jiangmiao/auto-pairs'
-    Plug 'tpope/vim-surround'
+    " Plug 'tpope/vim-surround'
 
     " Git change
     Plug 'airblade/vim-gitgutter'
@@ -74,13 +74,13 @@ call plug#begin('~/.config/plugged-nvim')
     "Plug 'mhinz/vim-startify'
 
     " Syntax checking
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
 
     " Goyo - Distraction free writing
-    Plug 'junegunn/goyo.vim'    
+    " Plug 'junegunn/goyo.vim'    
 
     " Limelight
-    Plug 'junegunn/limelight.vim'
+    " Plug 'junegunn/limelight.vim'
     
     " Maximizer
     Plug 'szw/vim-maximizer'
