@@ -119,6 +119,7 @@ alias rdshift="redshift -l 24.1:90.41 & disown"
 alias nvimcfg="nvim ~/.config/nvim/init.vim"
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias topdf="libreoffice --headless --invisible --convert-to pdf"
 
 eval "$(lua ~/bin/z.lua --init zsh)"
 
