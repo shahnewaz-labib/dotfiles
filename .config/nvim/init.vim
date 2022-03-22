@@ -139,6 +139,12 @@ inoremap <C-s> <ESC>:w<CR>
 noremap <Leader>s :w <CR> :ClangFormat <CR>
 inoremap <Leader>s <ESC>:w<CR> :ClangFormat <CR>
 
+" Copy template
+noremap <Leader>t :!cp template.cpp %<CR><CR>
+
+" Open IO
+noremap <Leader>i :call IO()<CR>
+
 " Maximize current tab 
 nnoremap <C-a> :MaximizerToggle<CR>
 
@@ -153,6 +159,15 @@ map <Leader>q :wqa! <CR>
 " Focus current window
 nnoremap <C-t> :Goyo <CR>
 
+" things
+nnoremap Y yg$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Move highlighted lines up or down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Testing
 
