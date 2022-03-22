@@ -136,6 +136,9 @@ map <C-[> <ESC>
 noremap <C-s> :w <CR>
 inoremap <C-s> <ESC>:w<CR>
 
+noremap <Leader>s :w <CR> :ClangFormat <CR>
+inoremap <Leader>s <ESC>:w<CR> :ClangFormat <CR>
+
 " Maximize current tab 
 nnoremap <C-a> :MaximizerToggle<CR>
 
