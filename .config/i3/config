@@ -26,6 +26,8 @@
 
 ################## CUSTOM ##################
 
+
+
 # Connect to DSL
 bindsym $mod+g exec --no-startup-id nmcli device connect enp0s20f0u1c2
 bindsym $mod+u exec --no-startup-id nmcli device disconnect enp0s20f0u1c2
@@ -35,11 +37,14 @@ bindsym $mod+o exec --no-startup-d nmcli connection up RMX2
 bindsym $mod+p exec --no-startup-d nmcli connection down RMX2
 
 
+
 # Polybar
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh example
 
 # Autostart picom
 exec --no-startup-id picom -b
+
+bindsym $mod+Shift+w exec python ~/bin/wall.py
 
 # Monitor / Display settings
 exec --no-startup-id ~/.config/i3/autostart.sh
@@ -103,7 +108,7 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+space exec --no-startup-id rofi -show run
-bindsym $control+mod1+w exec --no-startup-id brave
+bindsym $control+mod1+w exec --no-startup-id 
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"

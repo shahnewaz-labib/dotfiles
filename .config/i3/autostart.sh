@@ -13,3 +13,5 @@ fi
 # redshift
 rdshift
 
+xset r rate 300 30
+
