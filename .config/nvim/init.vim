@@ -23,6 +23,7 @@ call plug#begin('~/.config/plugged-nvim')
     " fuzzy search
     " Plug 'nvim-lua/plenary.nvim'
     " Plug 'nvim-telescope/telescope.nvim'
+    " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
     " Commenting
     Plug 'tpope/vim-commentary'
