@@ -9,3 +9,6 @@ export PATH="$PATH:$HOME/bin/"
 
 export DB_USER="monty"
 export DB_PASS="pass"
+
+
+xset r rate 300 30

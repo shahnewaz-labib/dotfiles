@@ -122,6 +122,8 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias topdf="libreoffice --headless --invisible --convert-to pdf"
 alias open=xdg-open
 
+alias nivm=nvim
+
 eval "$(lua ~/bin/z.lua --init zsh)"
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"

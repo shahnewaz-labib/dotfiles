@@ -38,6 +38,7 @@ call plug#begin('~/.config/plugged-nvim')
     " Plug 'gosukiwi/vim-atom-dark'
     " Plug 'kyoz/purify'
     Plug 'morhetz/gruvbox'
+    Plug 'tomasiser/vim-code-dark'
     " Plug 'ErichDonGubler/vim-sublime-monokai'
     " Plug 'arcticicestudio/nord-vim'
     " Plug 'NLKNguyen/papercolor-theme'
@@ -90,8 +91,8 @@ call plug#end()
 
 
 """""" colorscheme  """"""
-set background=dark
 colorscheme gruvbox
+set background=dark
 """""" colorscheme  """"""
 
 

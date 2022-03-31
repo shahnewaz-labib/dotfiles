@@ -29,8 +29,11 @@
 
 
 # Connect to DSL
-bindsym $mod+g exec --no-startup-id nmcli device connect enp0s20f0u1c2
-bindsym $mod+u exec --no-startup-id nmcli device disconnect enp0s20f0u1c2
+# bindsym $mod+g exec --no-startup-id nmcli device connect enp0s20f0u1c2
+# bindsym $mod+u exec --no-startup-id nmcli device disconnect enp0s20f0u1c2
+bindsym $mod+g exec --no-startup-id nmcli c up IUT
+bindsym $mod+u exec --no-startup-id nmcli c down IUT
+
 
 # Connect to RMX2
 bindsym $mod+o exec --no-startup-d nmcli connection up RMX2
@@ -108,7 +111,7 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+space exec --no-startup-id rofi -show run
-bindsym $control+mod1+w exec --no-startup-id 
+bindsym $mod+Shift+f exec --no-startup-id fswebcam -r 640x480 --jpeg 100 -D 0 "/home/labib/Pictures/stalking/$(date).jpg"
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -288,15 +291,15 @@ mode "$mode_system" {
 # wal-powerline
 
 bar {
-        font pango:Ubuntu mono 10
+        font pango:Ubuntu mono 12
         position top
         #tray_output none
         status_command i3status
          status_command ~/.config/bumblebee-status/bumblebee-status \
-         -t solarized-powerline \
+         -t gruvbox-powerline-light \
          -m cpu memory date time brightness redshift pasink pasource battery \
          -p \
-         date.format="%d-%m-%Y" \
+         date.format="%d/%m/%Y" \
          time.format="%I:%M %p" \
          memory.format="{used}" \
          redshift.location="manual" redshift.lat="24.1" redshift.lon="90.41" \
