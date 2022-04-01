@@ -13,5 +13,7 @@ fi
 # redshift
 rdshift
 
+sh .profile
+
 xset r rate 300 30
 

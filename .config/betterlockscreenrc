@@ -15,6 +15,7 @@ wallpaper_cmd="feh --bg-fill"
 # default theme
 loginbox=00000066
 loginshadow=00000000
+# locktext="This too shall pass"
 locktext="This too shall pass"
 font="Ubuntu Mono"
 ringcolor=ffffffff
