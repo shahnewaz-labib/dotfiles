@@ -102,7 +102,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -299,7 +300,7 @@ bar {
          -t gruvbox-powerline-light \
          -m cpu memory date time brightness redshift pasink pasource battery \
          -p \
-         date.format="%d/%m/%Y" \
+         date.format="%a, %d %b %Y" \
          time.format="%I:%M %p" \
          memory.format="{used}" \
          redshift.location="manual" redshift.lat="24.1" redshift.lon="90.41" \

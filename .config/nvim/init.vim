@@ -8,7 +8,7 @@ set expandtab
 set splitbelow splitright
 set nu rnu
 set noshowmode
-set lazyredraw          " redraw screen only when we need to
+" set lazyredraw          " redraw screen only when we need to
 set showmatch           " highlight matching parentheses / brackets [{()}]
 " set ruler               " show line and column number of the cursor on right side of statusline
 syntax enable
@@ -70,7 +70,8 @@ call plug#begin('~/.config/plugged-nvim')
     Plug 'airblade/vim-gitgutter'
 
     " Vim snippets
-    "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' 
+    Plug 'SirVer/ultisnips' 
+    Plug 'honza/vim-snippets' 
 
     " Start
     "Plug 'mhinz/vim-startify'
