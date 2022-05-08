@@ -26,7 +26,8 @@
 
 ################## CUSTOM ##################
 
-
+# autostart
+exec --no-startup-id xset r rate 300 30
 
 # Connect to DSL
 # bindsym $mod+g exec --no-startup-id nmcli device connect enp0s20f0u1c2
@@ -248,7 +249,7 @@ bindsym control+mod1+X mode "$mode_system"
 set $mode_system System (l) lock, (k) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
-    bindsym k exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
+    bindsym shift+k exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
     bindsym u exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
     bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
     bindsym r exec --no-startup-id ~/.config/i3/i3exit.sh reboot, mode "default"
@@ -292,19 +293,19 @@ mode "$mode_system" {
 # wal-powerline
 
 bar {
-        font pango:Ubuntu mono 12
+        font pango:Ubuntu mono 15
         position top
         #tray_output none
         status_command i3status
          status_command ~/.config/bumblebee-status/bumblebee-status \
          -t gruvbox-powerline-light \
-         -m cpu memory date time brightness redshift pasink pasource battery \
+         -m cpu memory date time brightness pasink pasource battery \
          -p \
          date.format="%a, %d %b %Y" \
          time.format="%I:%M %p" \
          memory.format="{used}" \
-         redshift.location="manual" redshift.lat="24.1" redshift.lon="90.41" \
-         network_traffic.interval=2 \
+         # redshift.location="manual" redshift.lat="24.1" redshift.lon="90.41" \
+         # network_traffic.interval=2 \
          cpu.interval=2 \
          memory.interval=2
 

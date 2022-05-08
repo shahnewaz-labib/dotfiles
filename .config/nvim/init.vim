@@ -32,7 +32,7 @@ call plug#begin('~/.config/plugged-nvim')
     Plug 'psliwka/vim-smoothie'
 
     " Formatter
-   Plug 'rhysd/vim-clang-format'
+    Plug 'rhysd/vim-clang-format'
 
     " Themes
     " Plug 'gosukiwi/vim-atom-dark'
@@ -127,7 +127,8 @@ map <Leader>y :%y+ <CR>
 map <Leader>d :%d <CR>
 
 " More comfortable esc
-map <C-[> <ESC>
+" map <C-[> <ESC>
+map <A> <ESC>
 
 " Switching Tabs
 " nnoremap <C-Left> :tabprevious<CR>                                                                            

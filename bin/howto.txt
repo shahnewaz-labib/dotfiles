@@ -1,0 +1,10 @@
+[+] Disable or enable laptop keyboard:
+    1. run `xinput list` and find the line with "AT Translated Set 2 keyboard"
+        ex: 
+            AT Translated Set 2 keyboard  id=16	[slave  keyboard (3)]
+
+            Here, keyboard id is 16 and master id is 3
+    2. To disable the keyboard run `xinput float id`
+       To enable the keyboard run `xinput reattach id masterid`
+
+

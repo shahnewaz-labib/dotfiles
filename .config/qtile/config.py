@@ -21,13 +21,17 @@ keys = [
              lazy.spawn(myTerm+" -e fish"),
              desc='Launches My Terminal'
              ),
+         # Key([mod], "d",
+         #     lazy.spawn("dmenu_run -p 'Run: '"),
+         #     desc='Run Launcher'
+         #     ),
          Key([mod], "d",
-             lazy.spawn("dmenu_run -p 'Run: '"),
+             lazy.spawn("rofi -show run"),
              desc='Run Launcher'
              ),
          Key([mod], "b",
              lazy.spawn(myBrowser),
-             desc='Qutebrowser'
+             desc='brave'
              ),
          Key([mod], "Tab",
              lazy.next_layout(),
@@ -41,12 +45,12 @@ keys = [
              lazy.restart(),
              desc='Restart Qtile'
              ),
-         Key([mod, "shift"], "q",
+         Key(["control", mod, "shift"], "q",
              lazy.shutdown(),
              desc='Shutdown Qtile'
              ),
          Key(["control", "shift"], "e",
-             lazy.spawn("emacsclient -c -a emacs"),
+             lazy.spawn("nvim"),
              desc='Doom Emacs'
              ),
          ### Switch focus to specific monitor (out of three)
@@ -575,7 +579,7 @@ reconfigure_screens = True
 # focus, should we respect this or not?
 auto_minimize = True
 
-@hook.subscribe.startup_once
+@hook.subscribe.startup
 def start_once():
     home = os.path.expanduser('~')
     subprocess.call([home + '/.config/qtile/autostart.sh'])
