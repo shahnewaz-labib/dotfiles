@@ -28,6 +28,9 @@ call plug#begin('~/.config/plugged-nvim')
     " Commenting
     Plug 'tpope/vim-commentary'
 
+    " Colorful brackets
+    Plug 'frazrepo/vim-rainbow'
+
     " Smoothe scrolling
     Plug 'psliwka/vim-smoothie'
 
@@ -54,7 +57,7 @@ call plug#begin('~/.config/plugged-nvim')
 
 
     " Instant markdown
-    " Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+    Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
     " Airline
     "Plug 'vim-airline/vim-airline'
     "Plug 'vim-airline/vim-airline-themes
@@ -70,8 +73,8 @@ call plug#begin('~/.config/plugged-nvim')
     Plug 'airblade/vim-gitgutter'
 
     " Vim snippets
-    Plug 'SirVer/ultisnips' 
-    Plug 'honza/vim-snippets' 
+    " Plug 'SirVer/ultisnips' 
+    " Plug 'honza/vim-snippets' 
 
     " Start
     "Plug 'mhinz/vim-startify'
@@ -89,6 +92,26 @@ call plug#begin('~/.config/plugged-nvim')
     Plug 'szw/vim-maximizer'
 
 call plug#end()
+
+" coc
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 
 """""" colorscheme  """"""
@@ -109,14 +132,28 @@ set background=dark
 " nnoremap <leader>fb <cmd>Telescope buffers<cr>
 " nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+let g:codesdir=$HOME . "/codes/X"
+
 " Key mapping for cp
 autocmd filetype cpp map <F3> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program && timeout 5 /home/labib/codes/X/program <CR>
 autocmd filetype cpp map <F5> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program <CR> 
-autocmd filetype cpp map <F4> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program &&  timeout 5 /home/labib/codes/X/program > /home/labib/codes/X/out <CR>
+" autocmd filetype cpp map <F4> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program &&  timeout 5 /home/labib/codes/X/program > /home/labib/codes/X/out <CR>
 autocmd filetype cpp map <F6> :!g++ % -D LOCAL -std=c++17 -o /home/labib/codes/X/program && (timeout 5 /home/labib/codes/X/program < /home/labib/codes/X/in) >  /home/labib/codes/X/out<CR>
 autocmd filetype python map <F5> :!python3 % <CR>
 autocmd filetype sh map <F5> :!chmod +x % && ./% <CR>
 autocmd filetype js map<F6> :!node % <CR>
+
+" Copy/Paste Output/Input
+fu UpdateInput()
+    exe "silent !xclip -o -sel clip > " . g:codesdir . "/in"
+endfu
+
+fu CopyOutput()
+    exe "silent !xclip -sel clip " . g:codesdir . "/out"
+endfu
+
+map <F4> :call UpdateInput() <CR>
+map<leader><F3> :call CopyOutput() <CR>
 
 " Leader key
 let mapleader=',,'
@@ -129,12 +166,6 @@ map <Leader>d :%d <CR>
 " More comfortable esc
 " map <C-[> <ESC>
 map <A> <ESC>
-
-" Switching Tabs
-" nnoremap <C-Left> :tabprevious<CR>                                                                            
-" nnoremap <C-Right> :tabnext<CR>
-" nnoremap <C-j> :tabprevious<CR>                                                                            
-" nnoremap <C-k> :tabnext<CR>
 
 " Save file
 noremap <C-s> :w <CR>
@@ -170,10 +201,10 @@ nnoremap N Nzzzv
 nnoremap J mzJ`z
 
 " Move highlighted lines up or down
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 " Testing
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
  let t:is_transparent = 0
  function! Toggle_transparent()
@@ -227,4 +258,3 @@ set noequalalways
 
 " Sets the cursor as a 'block' in insert mode
 "set guicursor=n-v-c:block-Cursor 
-
